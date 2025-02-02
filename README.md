@@ -4,7 +4,7 @@ And below is shown the specific project categorisation and its content introduct
 ## Python language
 ### INFO1110 Introduction to Programming
 #### Assignment 1
-This project could be found in directory `projects/python/INFO1110/info1110-asm-1`.
+This project could be found in directory (projects/python/INFO1110/info1110-asm-1).
 This project aims to create a text-based version of Mousehunt game. In this game, the Kingdom is overrun by mice. And user acts as a hunter to eradicate mice to gain gold and cheese （serve as a decoy to hunt mice）after successfully. As the beginning of programming, this task has been separated into seven tasks.
 
 - Task 1: Display title, logo and credits [related to `q1.py`]
@@ -16,7 +16,7 @@ This project aims to create a text-based version of Mousehunt game. In this game
 - Task 7: Combine the whole project [related to `game.py`]
 
 #### Assignment 2
-This project could be found in directory `projects/python/INFO1110/info1110-asm-2`.
+This project could be found in directory (projects/python/INFO1110/info1110-asm-2).
 This project is an extension game of Assignment 1. In comparison to Assignment 1, this project extends all the structures it covers.
 - Task 1: Upgrade Cheese Shop with three types [related to `shop.py`]
 - Task 2: Skip structure & identification on each cheese [related to `train.py` and `game.py`]
