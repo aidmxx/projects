@@ -1,0 +1,19 @@
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# macOS Finder files
+Icon?
+._*
+
+# macOS folder attributes
+Thumbs.db
+
+# macOS resource forks
+._*
+
+# Apple-specific backups
+*.swp
+*.swo
+
