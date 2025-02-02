@@ -1,0 +1,39 @@
+---
+title: "Project2_Data"
+output:
+  html_document:
+    css:
+      - https://use.fontawesome.com/releases/v5.0.6/css/all.css
+    code_folding: hide
+date: "2023-09-18"
+author: "SID: 530536402"
+---
+
+# Research Question
+**How do the people you live with effect your stress level as a first-year university student?**
+
+```{r}
+# Set global options to suppress messages and warnings
+options(
+  message = FALSE,
+  warning = FALSE
+)
+library(tidyverse)
+Project2Data <- read_csv("Uni_Student_Stress.csv")
+colnames(Project2Data) <- c("Timestamp", "gender", "live", "english", "sleep", "percentagetimestress", "moststressed", "stresslevel", "hoursuni", "strategy", "activity")
+ggplot(Project2Data, aes(x = factor(stresslevel))) + 
+  geom_bar(aes(fill=live)) + 
+  ggtitle("Living with vs Stress Level") +
+  xlab("Level of stress (1-10)") +
+  ylab("Frequency") +
+  labs(fill = "People you lived with")
+```
+
+# Acknowledgements
+
+- 25/08/23 Uni Stress survey (from Project 1) 
+  [Link to Survey](https://docs.google.com/forms/d/e/1FAIpQLSdNoHCNo-5_Wd0LVrCa4m3zQXLHVdm6Xb0yPszmuoV00LTtCw/viewform?usp=sf_link)
+- 18/09/23 Edstem Question
+
+<br>
+<br>

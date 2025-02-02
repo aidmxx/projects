@@ -1,0 +1,140 @@
+---
+title: "Project 2"
+author: 'Univeristy of Sydney SID: 530510697, 520519936, 530100502, 530518176, 530547475, 530536402'
+subtitle: "An Investigation of the Relationship between Individual's Environmental Factors and First Year Univeristy Student Self-rated Stress Levels"
+date: "18,09,2023"
+output:
+  html_document:
+    fig_caption: yes
+    number_sections: yes
+    self_contained: yes
+    theme: flatly
+---
+
+# Executive Summary
+In this report, it was found that students who speak English as a first language had lower stress levels, and university related factors contribute largest in proportion to stress. A positive weak correlation was observed between the number of study hours per week and stress levels.
+
+# Full Report
+
+## Initial Data Analysis (IDA)\
+### Source
+The data was collected from first year university students at the University of Syndey, utilising a Google form from 4/9/2023. (https://docs.google.com/forms/d/e/1FAIpQLSdNoHCNo-5_Wd0LVrCa4m3zQXLHVdm6Xb0yPszmuoV00LTtCw/viewform?usp=sf_link)
+
+### Structure
+The survey received 50 responses, which are each in a separate row. Each variable was in a separate column, with seven qualitative variables including rating of stress, first language, stressors, sleep and stress level, and three quantitative variables including hours spent on study and percentage of time stressed. Responses that were typed using ‘Other’ in the Google form in response to “Which of these makes you most stressed?” were grouped into one category called 'Other' in Excel.
+
+### Limitations
+The data is moderately limited as the survey was not controlled for the faculty or degree that participants are completing. Sampling bias is a limitation due to a disproportionately high number of female participants.
+
+### Assumptions
+A response of  “1000000” to “What percentage of the time do you feel stressed?” was assumed to be not serious and unrealistic. 
+
+### Data Cleaning
+The participant who responded “1000000” to “What percentage of the time do you feel stressed?” was removed from the data set using code (uni7clean = uni7%>%filter(percentagetimestress<=100)). 
+
+# Research Theme
+
+## Research Question 1
+How do individual stressors influence the stress levels among first year students?
+
+**Language Barriers**
+
+```{r}
+uni7 = read.csv("uni7.csv")
+library(tidyverse)
+library(ggplot2)
+uni7clean = uni7%>%filter(percentagetimestress<=100)
+ggplot(uni7clean, aes(x = factor(stresslevel), fill = english)) + geom_bar() + 
+  xlab("Rating of stress") + 
+  ylab("Frequency") +
+  labs(fill = "First Lanaguage English") +
+  ggtitle("English as First Lanaguage vs Stress Level")
+```
+```{r}
+table(uni7clean$stresslevel, uni7clean$english)
+```
+
+Students whose first language is English experienced lower self-rated stress levels than non-native English speakers. Of participants who had a lower stress rating (1.0-4.0) their first language was English. Those who selected a moderate-high stress rating (5.0-8.0), were evenly split between native and non-native English speakers. High-stress rating (9.0-10.0) was selected by majority non-native English speakers.  
+
+**Activities Related to Stress**
+
+```{r}
+ggplot(uni7clean, aes(x = stresslevel , fill = moststressed)) + geom_bar() +
+  xlab("Rating of stress") + 
+  ylab("Frequency") + 
+  labs(fill = "Highest Rated Personal Stress Causing Activity") + 
+  ggtitle("Highest Rated Personal Stress Related Activity vs Stress Level")
+```
+```{r}
+table(uni7clean$stresslevel, uni7clean$moststressed)
+```
+
+The majority of first year students experienced moderate-high stress levels (5.0-10.0). The largest proportion of participants rated their stress as moderate-high (7.0-8.0). The students picked average daily study time outside of class as the most common reason for stress across most stress levels. There are not as many students experiencing low stress levels (1.0-4.0) in comparison to students who experience moderate-higher stress levels (5.0-10.0). 
+
+**Conclusion**
+
+As shown in the data above, first-year sydney university students generally experience moderate-high stress levels, which is most often related to university factors, with non-native English speakers being on the higher end of the stress spectrum. 
+ 
+## Research Question 2
+How does the amount of hours spent studying affect the percentage of stress experienced by first year university students on a weekly basis?
+
+```{r}
+x = log(uni7clean$hoursuni)
+y = log(uni7clean$percentagetimestress)
+library(tidyverse)
+ggplot(uni7clean, aes(x=hoursuni, y=percentagetimestress, week = "yellow")) +
+  geom_smooth(method = "lm") +
+  geom_point() +
+  labs(
+    x = "Hours spent on study (per week)",
+    y = "Percentage stress"
+  ) +
+  ggtitle("The Relationship between Hours spent on study per week and stress percentage")
+
+cor(x, y)
+fit <- lm(y ~ x)
+ggplot(fit, aes(x = .fitted, y = .resid)) +
+  geom_point() + 
+   labs(
+    x = "Hours spent on study (per week)",
+    y = "Percentage stress"
+  ) +
+  geom_hline(yintercept = 0, linetype = "dashed", colour = "red") +
+  ggtitle("The Residual graph for Weekly stress percentage on Weekly study hours")
+
+```
+
+Correlation: r = 0.18 (weak positive relationship)
+
+Equation: y = 0.20x + 3.24 where x: weekly hours spent on study and y: weekly stress percentage
+
+The graph above illustrates a very weak positive linear relationship between the number of study hours per week and the percentage of time university students feel stress, as its correlation is 0.18. Stress levels are likely to rise when the number of study hours per week increases. The linear regression shows that stress accounts for 60% of the variance when there are 25 study hours per week. The random scatter of the residual plot reinforces this linear link, however, this on its own does not identify a linear graph. A log scale was used for the linear plot to reduce the scatter, but these variables still appear to be weakly related. 
+
+
+## Articles
+In a study (Ahmed, 2016), first year international students had a slightly higher stress level compared to domestic students, reinforcing our research question 1. A study relating to research question 1 found undergraduates who spent more time working with teachers had higher stress levels (Geng & Midford, 2015).
+
+# References
+Ahmed, F. (2016). Factors associated with stress among first-year undergraduate students attending an Australian University. Food and Nutrition Report, 1(3), 17–24. https://doi.org/10.24218/fnr.2015.13 
+
+Geng, G., & Midford, R. (2015). Investigating first year education students’ stress level. Australian Journal of Teacher Education, 40(40). https://doi.org/10.14221/ajte.2015v40n6.1 
+
+# Acknowdgements
+**List of Meetings and Contributions**
+
+#### 4/9/2023 Use of Data Collected from Group Google Survey (https://docs.google.com/forms/d/e/1FAIpQLSdNoHCNo-5_Wd0LVrCa4m3zQXLHVdm6Xb0yPszmuoV00LTtCw/viewform?usp=sf_link)
+
+13/08/2023 7pm Online | Giselle, Reel, Amelie, Yilin, Vanessa, Aaratika | All in Attendance: Worked on initial version of google sheets survey and research questions (Project 1)
+
+04/09/2023 7pm Online | Giselle, Reel, Amelie, Yilin, Vanessa, Aaratika | All in Attendance: Reviewed, finalised and distributed survey using feedback from project 1.
+
+14/09/2023 7pm Online | Giselle, Reel, Amelie, Yilin, Vanessa, Aaratika | All in Attendance: First analysis of survey data with reference to research questions. Distribution of individual work
+
+18/09/2023 7pm Online | Giselle, Reel, Amelie, Yilin, Vanessa, Aaratika | All in Attendance: Each present partially finished individual work, provide each other feedback and begin to collate elements of final Rmarkdown file. 
+
+20/9/2023 | Giselle | Ed Discussion Question | Feedback from Brigita Sarac (Staff) | (https://edstem.org/au/courses/12031/discussion/1584422)
+
+20/9/2023 | Giselle | Ed Discussion Question | Feedback from Asridh Dravid (Staff) |
+(https://edstem.org/au/courses/12031/discussion/1584571)
+
+21/09/2023 Post Lab | Giselle, Reel, Amelie, Yilin, Vanessa, Aaratika | All in Attendance: Final review and collation of work. 
