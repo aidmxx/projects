@@ -1,0 +1,6 @@
+'''
+The configuration file is always a text file (a file with extension txt) 
+named config.txt. The contents of the configuration file is always formatted 
+specifically to differentiate between directory and files. See the Question 6 
+specifications for example config files.
+'''
