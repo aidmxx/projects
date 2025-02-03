@@ -29,6 +29,16 @@ This project is an extension game of Assignment 1. In comparison to Assignment 1
 - Task 7: Combine the improved full project with three traps [related to [game_final.py](python/INFO1110/info1110-asm-2/game_final.py)]
 - Task 8: Format structures as each classes [related to [game_oo.py](python/INFO1110/info1110-asm-2/game_oo.py), [trap.py](python/INFO1110/info1110-asm-2/trap.py), [hunter.py](python/INFO1110/info1110-asm-2/hunter.py), [cshop.py](python/INFO1110/info1110-asm-2/cshop.py) and [interface.py](python/INFO1110/info1110-asm-2/interface.py)]
 
+### SOFT2201 Data Structures and Algorithms
+#### Assignment 2
+This project could be found in directory ([python/COMP2123/asm-2](python/COMP2123/asm-2)).  
+This project aims to create a student record management system for all students and utilise the Binary Search Tree algorithm. And the specific task description could be found in [python/COMP2123/asm-2/Assignment2.pdf](python/COMP2123/asm-2/Assignment2.pdf).
+
+#### Assignment 4
+This project could be found in directory ([python/COMP2123/asm-4](python/COMP2123/asm-4)).  
+This project contains two algorithm questions have to be solved using python based code. And the specific task description could be found in [python/COMP2123/asm-4/Assignment4.pdf](python/COMP2123/asm-4/Assignment4.pdf).
+
+
 ## Java language
 ### INFO1113 Object-Oriented Programming
 #### WizardTower
