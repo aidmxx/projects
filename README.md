@@ -36,7 +36,13 @@ This project could be found in directory ([java/INFO1113/WizardTower](java/INFO1
 This project aims to create a Java language based Wizard Tower game. The player is able to place and update tower on the map to prevent enemies from reaching the wizard's tower. And the specific task description could be found in [here](java/INFO1113/WizardTower/INFO1113_Assignment_2023_S2.pdf). However, the project has only be built up to the enemy movement to find the direct road automatically and failed to build the structure of towers.
 
 ### SOFT2201 Software construction and design 1
+#### Assignment 2
+This project could be found in directory ([java/SOFT2201/asm-2](java/SOFT2201/asm-2)).  
+This project aims to implement a basic level Pac-Man by using the specified GoF design patterns. And the specific task description could be found in directory [java/SOFT2201/asm-2/SOFT2201 - Assignment 2.pdf](java/SOFT2201/asm-2/SOFT2201 - Assignment 2.pdf).
 
+#### Assignment 3
+This project could be found in directory ([java/SOFT2201/asm-3](java/SOFT2201/asm-3)).  
+This project extends Assignment 2 with adding more structures to implement. And the specific task description could be found in directory [java/SOFT2201/asm-2/Assignment_3__FINAL_.pdf](java/SOFT2201/asm-2/Assignment_3__FINAL_.pdf). However, this project hasn't been finished and with a few issues on point counting after the ghosts are eaten.
 
 ## C language
 ### COMP2017 Systems Programming
