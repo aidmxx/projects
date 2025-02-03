@@ -1,0 +1,26 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "C/C++: clang build active file",
+            "type": "shell",
+            "command": "clang",
+            "args": [
+                "-g",
+                "${fileDirname}/smallest_triangle.c", // Path to your C file
+                "-o",
+                "${fileDirname}/smallest_triangle"    // Output executable
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
