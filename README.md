@@ -48,3 +48,5 @@ This project could be found in directory ([R/DATA1001/project2/individual](R/DAT
 This project uses the R language to draw `ggplot` graph for analysing the given data as an individual work.
 
 #### Project 3
+This could be found in directory ([R/DATA1001/project3](R/DATA1001/project3)).
+This project employs R language to generate a report with graph analysis about the effect of unemployment rate and students' semester grades.
