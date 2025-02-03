@@ -1,0 +1,20 @@
+NEW 1
+hello
+REMOVE 0
+NEW 1
+{a}
+NEW 3
+where
+i
+am
+INSERT 2 0 {0}
+DELETE 1 -1
+NEW 1
+a
+NEW 1
+b
+NEW 2
+{2}
+{3}
+VIEW ALL
+VIEW-NESTED 4

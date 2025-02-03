@@ -1,0 +1,17 @@
+List 0: hello
+List 0 has been removed.
+
+Number of lists: 0
+INVALID COMMAND: NEW
+List 1: where -> i -> am
+INVALID COMMAND: INSERT
+List 1: where -> i
+List 2: a
+List 3: b
+Nested 4: {List 2} -> {List 3}
+Number of lists: 4
+List 1
+List 2
+List 3
+Nested 4
+{a} -> {b}

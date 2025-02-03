@@ -1,0 +1,8 @@
+INVALID COMMAND: INSERT
+List 0: 
+List 1: hello
+Nested 1: hello -> {List 0}
+Number of lists: 2
+List 0
+Nested 1
+hello -> {}
