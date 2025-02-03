@@ -42,13 +42,15 @@ This project aims to create a Java language based Wizard Tower game. The player 
 ### COMP2017 Systems Programming
 #### Assignment 1
 This project could be found in directory ([C/COMP2017/asm-1](C/COMP2017/asm-1)).  
-This 
+This project aims to write and test software to support a simple geometry processing pipeline to be used as a stream processing framework. And the specific task description could be found in directory [C/COMP2017/asm-1/assignment1.pdf](C/COMP2017/asm-1/assignment1.pdf).
+
 #### Assignment 2
 This project could be found in directory ([C/COMP2017/asm-2](C/COMP2017/asm-2)).  
+This project aims to create a multi-type linked list data with three tasks must be completed in order. And the specific task description could be found in directory [C/COMP2017/asm-2/Assignment2.pdf](C/COMP2017/asm-2/Assignment2.pdf).
 
 #### Assignment 3
 This project could be found in directory ([C/COMP2017/asm-3](C/COMP2017/asm-3)).  
-
+This project aims to construct a P2P File-Transfer program that allows sending, receiving and detection of anomals data chunks. And the specific task description could be found in directory [C/COMP2017/asm-2/Assignment2.pdf](C/COMP2017/asm-2/Assignment2.pdf).
 
 ## R language
 ### DATA1001 Foundations of Data Science
