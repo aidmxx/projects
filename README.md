@@ -18,8 +18,8 @@ This project aims to create a text-based version of Mousehunt game. In this game
 - Task 7: Combine the whole project [related to [game.py](python/INFO1110/info1110-asm-1/game.py)]
 
 #### Assignment 2
-This project could be found in directory ([python/INFO1110/info1110-asm-2](python/INFO1110/info1110-asm-2)).
-This project is an extension game of Assignment 1. In comparison to Assignment 1, this project extends all the structures it covers.
+This project could be found in directory ([python/INFO1110/info1110-asm-2](python/INFO1110/info1110-asm-2)).  
+This project is an extension game of Assignment 1. In comparison to Assignment 1, this project extends all the structures it covers.  
 - Task 1: Upgrade Cheese Shop with three types [related to [shop.py](python/INFO1110/info1110-asm-2/shop.py)]
 - Task 2: Skip structure & identification on each cheese [related to [train.py](python/INFO1110/info1110-asm-2/train.py) and [game.py](python/INFO1110/info1110-asm-2/game.py)]
 - Task 3: New mouse type release [related to [mouse.py](python/INFO1110/info1110-asm-2/mouse.py)]
@@ -32,7 +32,7 @@ This project is an extension game of Assignment 1. In comparison to Assignment 1
 ## Java language
 ### INFO1113 Object-Oriented Programming
 #### WizardTower
-This project could be found in directory ([java/INFO1113/WizardTower](java/INFO1113/WizardTower)).
+This project could be found in directory ([java/INFO1113/WizardTower](java/INFO1113/WizardTower)).  
 This project aims to create a Java language based Wizard Tower game. The player is able to place and update tower on the map to prevent enemies from reaching the wizard's tower. And the specific task description could be found in [here](java/INFO1113/WizardTower/INFO1113_Assignment_2023_S2.pdf). However, the project has only be built up to the enemy movement to find the direct road automatically and failed to build the structure of towers.
 
 ### SOFT2201 Software construction and design 1
@@ -41,26 +41,26 @@ This project aims to create a Java language based Wizard Tower game. The player 
 ## C language
 ### COMP2017 Systems Programming
 #### Assignment 1
-This project could be found in directory ([C/COMP2017/asm-1](C/COMP2017/asm-1)).
+This project could be found in directory ([C/COMP2017/asm-1](C/COMP2017/asm-1)).  
 This 
 #### Assignment 2
-This project could be found in directory ([C/COMP2017/asm-2](C/COMP2017/asm-2)).
+This project could be found in directory ([C/COMP2017/asm-2](C/COMP2017/asm-2)).  
 
 #### Assignment 3
-This project could be found in directory ([C/COMP2017/asm-3](C/COMP2017/asm-3)).
+This project could be found in directory ([C/COMP2017/asm-3](C/COMP2017/asm-3)).  
 
 
 ## R language
 ### DATA1001 Foundations of Data Science
 #### Project 2
 ##### Group
-This project could be found in directory ([R/DATA1001/project2/group](R/DATA1001/project2/group)).
+This project could be found in directory ([R/DATA1001/project2/group](R/DATA1001/project2/group)).  
 This project uses the R language to graph and analyze given data on student stress at a university (`uni7.csv`) and to participate in group work as a team member.
 
 ##### Individual
-This project could be found in directory ([R/DATA1001/project2/individual](R/DATA1001/project2/individual)).
+This project could be found in directory ([R/DATA1001/project2/individual](R/DATA1001/project2/individual)).  
 This project uses the R language to draw `ggplot` graph for analysing the given data as an individual work.
 
 #### Project 3
-This could be found in directory ([R/DATA1001/project3](R/DATA1001/project3)).
+This could be found in directory ([R/DATA1001/project3](R/DATA1001/project3)).  
 This project employs R language to generate a report with graph analysis about the effect of unemployment rate and students' semester grades.
