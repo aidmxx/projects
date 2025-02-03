@@ -50,7 +50,7 @@ This project aims to create a multi-type linked list data with three tasks must 
 
 #### Assignment 3
 This project could be found in directory ([C/COMP2017/asm-3](C/COMP2017/asm-3)).  
-This project aims to construct a P2P File-Transfer program that allows sending, receiving and detection of anomals data chunks. And the specific task description could be found in directory [C/COMP2017/asm-2/Assignment2.pdf](C/COMP2017/asm-2/Assignment2.pdf).
+This project aims to construct a P2P File-Transfer program that allows sending, receiving and detection of anomals data chunks. And the specific task description could be found in directory [C/COMP2017/asm-3/Assignment3.pdf](C/COMP2017/asm-3/Assignment3.pdf).
 
 ## R language
 ### DATA1001 Foundations of Data Science
