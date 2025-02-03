@@ -38,3 +38,13 @@ This project aims to create a Java language based Wizard Tower game. The player 
 ### COMP2017 Systems Programming
 ## R language
 ### DATA1001 Foundations of Data Science
+#### Project 2
+##### Group
+This project could be found in directory ([R/DATA1001/project2/group](R/DATA1001/project2/group)).
+This project uses the R language to graph and analyze given data on student stress at a university (`uni7.csv`) and to participate in group work as a team member.
+
+##### Individual
+This project could be found in directory ([R/DATA1001/project2/individual](R/DATA1001/project2/individual)).
+This project uses the R language to draw `ggplot` graph for analysing the given data as an individual work.
+
+#### Project 3
