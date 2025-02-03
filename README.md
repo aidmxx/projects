@@ -38,7 +38,7 @@ This project aims to create a Java language based Wizard Tower game. The player 
 ### SOFT2201 Software construction and design 1
 #### Assignment 2
 This project could be found in directory ([java/SOFT2201/asm-2](java/SOFT2201/asm-2)).  
-This project aims to implement a basic level Pac-Man by using the specified GoF design patterns. And the specific task description could be found in directory [java/SOFT2201/asm-2/SOFT2201 - Assignment 2.pdf](java/SOFT2201/asm-2/SOFT2201 - Assignment 2.pdf).
+This project aims to implement a basic level Pac-Man by using the specified GoF design patterns. And the specific task description could be found in directory [java/SOFT2201/asm-2/SOFT2201_Assignment_2.pdf](java/SOFT2201/asm-2/SOFT2201_Assignment_2.pdf).
 
 #### Assignment 3
 This project could be found in directory ([java/SOFT2201/asm-3](java/SOFT2201/asm-3)).  
