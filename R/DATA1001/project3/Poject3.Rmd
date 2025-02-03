@@ -1,0 +1,446 @@
+---
+title: "Unraveling Academic Outcomes: The Effects of Unemployment Rate on academic outcomes and Semester Grades"
+author: "Student Name: Yilin Li | SID: 530536402"
+subtitle: "Project 3"
+date: "The University of Sydney | DATA1001 | 26/10/2023"
+# You can change the title, subtitle, author etc.
+# if you do not want a subtitle, author, or date just delete or comment # the the line!
+output:
+  html_document:
+    fig_caption: yes
+    number_sections: yes
+    self_contained: yes
+    theme: flatly
+    # Other themes can be found at: https://bootswatch.com/
+    css: 
+      - https://use.fontawesome.com/releases/v5.0.6/css/all.css
+    #This will allow you to insert icons in your document, thanks to [Font Awesome](http://fontawesome.io).
+    #You will find an examples below.
+    # If you are knitting your document but not connected to the internet, place a "#" in front of the css line above with the font-awesome.min.css line to comment it out. This will let you knit the document in draft form until you connect again and knit the final. Note that when you do this some elements will be missing from the knitted slides. 
+    toc: true
+    #This adds a Table of Contents (toc).
+    toc_depth: 3
+    #This controls the number of subheadings included in the toc.
+    toc_float: true
+    #This allows toc to update relative to your location as you scroll down the html page.
+    code_folding: hide
+    #code_folding can be changed to "hide"" if you want the all your code to be collapsed when you open the document
+    
+    # More information: http://rmarkdown.rstudio.com/html_document_format.html
+---
+
+<br>
+
+# Client Bio & Recommendation
+
+## Client Bio
+#### <span style="font-size: larger;">[StudyAssist](https://www.studyassist.gov.au/)</span> {#StudyAssist .unnumbered}
+
+StudyAssist is an Australian Government project aimed at aiding students in their pursuit of higher education. They provide information about government loans and student financial support programmes.
+<br>
+
+## Recommendation
+Given that the aim of StudyAssist is to assist students, it is critical that they take use of the current report's insights concerning the relationship between unemployment and student academic progress. StudyAssist can improve their grant programmes to better suit the requirements of students in high-unemployment areas by better understanding these links. This data-driven method increases their outreach efforts and ensures that students from challenging backgrounds are aware of the assistance available to them. This not only increases StudyAssist's position as an educational ally, but also ensures that more students get the help they require.
+<br>
+
+# Evidence
+
+## Initial Data Analysis (IDA)
+This study examines data from the Polytechnic Institute of Portalegre, available on [Kaggle](https://www.kaggle.com/datasets/thedevastator/higher-education-predictors-of-student-retention?resource=download), focusing on undergraduate enrollees. Data of significant research significance will be used in this report for the study due to the reasonably broad coverage of the data.<br>
+<br>
+
+Central to this analysis is the unemployment rate within the students' socioeconomic context, which will be juxtaposed against:
+
+- Relationship between unemployment rate and academic outcomes
+- Relationship between unemployment rate and second-semester curricular unit grades
+
+In addition, the unemployment rate and second-semester unit grades are continuous data, and the target data type (which is employed to analyse academic outcomes) is categorical. To investigate the association of the factors, the photos were shown using a stacked bar plot and linear regression.
+<br>
+
+## Relationship between unemployment rate & academic outcomes
+
+Academic outcomes are derived from data on graduated, dropped-out, and currently enrolled students. Considering potential skewness from recently enrolled students, the analysis will exclusively scrutinize the correlation between unemployment rates at data collection and the outcomes of graduates and dropouts.<br>
+
+```{r}
+#| include = FALSE
+library(dplyr)
+library(ggplot2)
+library(readr)
+library(ggthemes) # For additional themes and scales
+```
+
+```{r message=FALSE}
+students <- read_csv("students.csv")
+students <- students %>%
+  filter(Target %in% c("Graduate", "Dropout")) %>%
+  arrange(`Unemployment rate`)
+
+# Calculate the count and percentage for each group
+students_sum <- students %>%
+  group_by(`Unemployment rate`, Target) %>%
+  summarise(count = n()) %>%
+  mutate(percentage = count / sum(count) * 100)
+
+ggplot(students_sum, aes(x=factor(`Unemployment rate`, levels = unique(`Unemployment rate`)), y=count, fill=Target)) +
+  geom_bar(stat="identity", position="stack", width=0.5, color=NA) + # Remove black frame by setting color to NA
+  geom_text(aes(label=sprintf("%.1f%%", percentage), y=ifelse(Target=="Dropout", count/2, count + (count[Target=="Dropout"] / 2))), position=position_stack(vjust=0.5), size=3, color="black", fontface="bold") +
+  scale_fill_manual(values=c("Dropout"=scales::alpha("pink", 0.8), "Graduate"=scales::alpha("green", 0.8))) +
+  labs(title="Unemployment Rate vs academic outcomes", x="Unemployment Rate", y="Count") +
+  theme_fivethirtyeight() + # Use the FiveThirtyEight theme
+  theme(
+    plot.title = element_text(size=20, hjust=0.5),
+    axis.title.x = element_text(size=14, face="bold"),
+    axis.title.y = element_text(size=14, face="bold"),
+    axis.text.x = element_text(size=12),
+    axis.text.y = element_text(size=12),
+    legend.title = element_text(size=14, face="bold"),
+    legend.text = element_text(size=12)
+  ) +
+  guides(fill=guide_legend(reverse=TRUE))
+```
+<br>
+
+The graph depicts the association between increased unemployment rates and higher graduation rates among students. As the unemployment rate climbs, it appears that the percentage of students graduating rises as well. For example, when the unemployment rate is 7.6%, the graduation rate is 55.3%, whereas when the unemployment rate is 16.2%, the graduation rate rises to 56.0%. However, the percentage of graduates did not seem to rise dramatically and consistently when the unemployment rate rose. As a result, the pattern implies that a more difficult economic condition, characterised by high unemployment, may drive students to prioritise and persevere in their studies, hence raising graduation rates.
+<br>
+
+## Relationship between unemployment rate & 2nd semester curricular units grade
+Data from students' second semester grades are evaluated herein. As posited earlier, second semester metrics offer enhanced validity, accounting for new students' acclimatization to semester dynamics. Furthermore, this segment disaggregates and assesses students based on distinct academic statuses.
+<br>
+
+<div class="tabset">
+### Linear Regression Plots
+#### Graduated students
+```{r message=FALSE, warning=FALSE}
+students <- read_csv("students.csv")
+students <- students %>%
+  filter(Target == "Graduate")
+
+x = students$`Curricular units 2nd sem (grade)`
+y = students$`Unemployment rate`
+
+# Calculate linear model and correlation
+lm_model <- lm(y ~ x)
+cor_value <- cor(x, y)
+
+# Extract coefficients from the linear model
+lm_coef <- coef(lm_model)
+
+# Label for linear function
+label_eq <- sprintf("y = %.2fx + %.2f", lm_coef[2], lm_coef[1])
+
+# Label for correlation
+label_cor <- sprintf("r = %.2f", cor_value)
+
+# Define a position for the labels based on quantiles and predicted values
+x_pos <- quantile(x, 0.8) 
+y_pos_eq <- predict(lm_model, newdata = data.frame(x = x_pos))
+y_pos_cor <- y_pos_eq + diff(range(y)) * 0.05
+
+# Enhanced plot
+ggplot(students, aes(x, y)) +
+  geom_point(aes(color = y), size = 2.5, alpha = 0.7) + 
+  geom_smooth(method = "lm", se = FALSE, color = "red", aes(group = 1), size = 1.2) +
+  annotate("text", x = x_pos, y = y_pos_eq, label = label_eq, col = "black", size = 4, fontface = "bold") +
+  annotate("text", x = x_pos, y = y_pos_cor, label = label_cor, col = "black", size = 4, fontface = "bold") +
+  scale_color_gradient(low = "blue", high = "yellow") +
+  theme_minimal() +
+  theme(
+    legend.position = "none",
+    plot.title = element_text(hjust = 0.5, size = 16, face = "bold"),
+    axis.title.x = element_text(size = 14, face = "bold"),
+    axis.title.y = element_text(size = 14, face = "bold"),
+    axis.text = element_text(size = 12)
+  ) +
+  labs(
+    title = "Graduated students' 2nd sem grade vs Unemployment rate",
+    x = "Graduated students' 2nd sem grade",
+    y = "Unemployment rate"
+  )
+```
+
+#### Enrolled students
+```{r message=FALSE, warning=FALSE}
+students <- read_csv("students.csv")
+students <- students %>%
+  filter(Target == "Enrolled")
+
+x = students$`Curricular units 2nd sem (grade)`
+y = students$`Unemployment rate`
+
+# Calculate linear model and correlation
+lm_model <- lm(y ~ x)
+cor_value <- cor(x, y)
+
+# Extract coefficients from the linear model
+lm_coef <- coef(lm_model)
+
+# Label for linear function
+label_eq <- sprintf("y = %.2fx + %.2f", lm_coef[2], lm_coef[1])
+
+# Label for correlation
+label_cor <- sprintf("r = %.2f", cor_value)
+
+# Define a position for the labels based on quantiles and predicted values
+x_pos <- quantile(x, 0.8) 
+y_pos_eq <- predict(lm_model, newdata = data.frame(x = x_pos))
+y_pos_cor <- y_pos_eq + diff(range(y)) * 0.05
+
+# Enhanced plot
+ggplot(students, aes(x, y)) +
+  geom_point(aes(color = y), size = 2.5, alpha = 0.7) + 
+  geom_smooth(method = "lm", se = FALSE, color = "red", aes(group = 1), size = 1.2) +
+  annotate("text", x = x_pos, y = y_pos_eq, label = label_eq, col = "black", size = 4, fontface = "bold") +
+  annotate("text", x = x_pos, y = y_pos_cor, label = label_cor, col = "black", size = 4, fontface = "bold") +
+  scale_color_gradient(low = "blue", high = "yellow") +
+  theme_minimal() +
+  theme(
+    legend.position = "none",
+    plot.title = element_text(hjust = 0.5, size = 16, face = "bold"),
+    axis.title.x = element_text(size = 14, face = "bold"),
+    axis.title.y = element_text(size = 14, face = "bold"),
+    axis.text = element_text(size = 12)
+  ) +
+  labs(
+    title = "Enrolled students' 2nd sem grade vs Unemployment rate",
+    x = "Enrolled students' 2nd sem grade",
+    y = "Unemployment rate"
+  )
+```
+
+#### Dropout students
+```{r message=FALSE, warning=FALSE}
+students <- read_csv("students.csv")
+students <- students %>%
+  filter(Target == "Dropout")
+
+x = students$`Curricular units 2nd sem (grade)`
+y = students$`Unemployment rate`
+
+# Calculate linear model and correlation
+lm_model <- lm(y ~ x)
+cor_value <- cor(x, y)
+
+# Extract coefficients from the linear model
+lm_coef <- coef(lm_model)
+
+# Label for linear function
+label_eq <- sprintf("y = %.2fx + %.2f", lm_coef[2], lm_coef[1])
+
+# Label for correlation
+label_cor <- sprintf("r = %.2f", cor_value)
+
+# Define a position for the labels based on quantiles and predicted values
+x_pos <- quantile(x, 0.8) 
+y_pos_eq <- predict(lm_model, newdata = data.frame(x = x_pos))
+y_pos_cor <- y_pos_eq + diff(range(y)) * 0.05
+
+# Enhanced plot
+ggplot(students, aes(x, y)) +
+  geom_point(aes(color = y), size = 2.5, alpha = 0.7) + 
+  geom_smooth(method = "lm", se = FALSE, color = "red", aes(group = 1), size = 1.2) +
+  annotate("text", x = x_pos, y = y_pos_eq, label = label_eq, col = "black", size = 4, fontface = "bold") +
+  annotate("text", x = x_pos, y = y_pos_cor, label = label_cor, col = "black", size = 4, fontface = "bold") +
+  scale_color_gradient(low = "blue", high = "yellow") +
+  theme_minimal() +
+  theme(
+    legend.position = "none",
+    plot.title = element_text(hjust = 0.5, size = 16, face = "bold"),
+    axis.title.x = element_text(size = 14, face = "bold"),
+    axis.title.y = element_text(size = 14, face = "bold"),
+    axis.text = element_text(size = 12)
+  ) +
+  labs(
+    title = "Dropout students' 2nd sem grade vs Unemployment rate",
+    x = "Dropout students' 2nd sem grade",
+    y = "Unemployment rate"
+  )
+```
+</div>
+<br>
+The graph demonstrates the association between second-semester grades and unemployment rates for graduated, current, and dropout students. Notably, higher unemployment rates appear to coincide with better scores for both current and graduated students, implying a probable link between academic achievement and economic position. With r values of 0.04 for both the graduated and enrolled groups, this link is small but positive.These data point to the nuanced nature of the link between educational attainment and unemployment.
+<br>
+
+# Testing
+### Linear Modelling
+Depending on the variables type, the use of linear modelling provides a clear explanation of relationships and aids in measuring projected outcomes and testing hypotheses. As a result, the 'HATPC' method will be used to test the relationship between the unemployment rate and each target type students' second-semester curricular unit grades. And in here shows the 'HATPC' steps for graduated students:
+
+#### <span style="font-size: larger;">H - Hypothesis</span> {#Hypothesis .unnumbered}
+- H0: There's no linear correlation between the unemployment rate and the second-semester grades of graduated students.
+- H1: There's a linear correlation between the unemployment rate and the second-semester grades of graduated students.
+
+#### <span style="font-size: larger;">A - Assumptions</span> {#Assumptions .unnumbered}
+1. We assume that the sample of 2209 students out of 4424 is randomly selected.
+2. The relationship between the two variables should be linear.
+3. Each pair of variables is independent.
+
+#### <span style="font-size: larger;">T - Test statistic</span> {#Test .unnumbered}
+```{r message=FALSE, warning=FALSE}
+# Load necessary libraries
+library(readr)
+library(dplyr)
+
+# Read the CSV file
+students <- read_csv("students.csv")
+
+# Count occurrences of each category in the 'Target' column
+status_counts <- table(students$Target)
+
+# Extract specific counts
+num_graduated <- status_counts['Graduate']
+num_Enrolled <- status_counts['Enrolled']
+num_Dropout <- status_counts['Dropout']
+```
+
+```{r}
+calculate_t_statistic <- function(r, n) {
+  numerator <- r * sqrt(n - 2)
+  denominator <- sqrt(1 - r^2)
+  
+  t <- numerator / denominator
+
+  cat("t =", t, "\n")
+}
+
+r_value <- 0.04 #given in evidence linear plot
+t_statistic_result <- calculate_t_statistic(r_value, as.numeric(num_graduated))
+```
+
+#### <span style="font-size: larger;">P - P-value</span> {#p-value .unnumbered}
+- The P-values in this section are based on those produced with the [sociostatistics](https://www.socscistatistics.com/pvalues/tdistribution.aspx) calculator.
+- The P-value is approximately equal to 0.03.
+
+#### <span style="font-size: larger;">C - Conclusion</span> {#conclusion .unnumbered}
+Based on the p-value = 0.03 < 0.05:
+
+- H0 is rejected;
+- There's a linear correlation between the unemployment rate and the second-semester grades of graduated students.
+
+#### <span style="font-size: larger;">Similar as above steps, for the other two categories:</span> {#others .unnumbered}
+
+Dropout students:
+<br>
+```{r}
+calculate_t_statistic <- function(r, n) {
+  numerator <- r * sqrt(n - 2)
+  denominator <- sqrt(1 - r^2)
+  
+  t <- numerator / denominator
+
+  cat("t =", t, "\n")
+}
+
+r_value <- -0.03 # given in evidence linear plot
+num_Dropout <- 60 # You need to provide this value or retrieve it from your data
+t_statistic_result <- calculate_t_statistic(r_value, as.numeric(num_Dropout))
+```
+
+- p-value = 0.12 > 0.05  
+- Conclusion: There's no linear correlation between the unemployment rate and the second-semester grades of dropout students.
+
+
+Enrolled students:
+<br>
+```{r}
+calculate_t_statistic <- function(r, n) {
+  numerator <- r * sqrt(n - 2)
+  denominator <- sqrt(1 - r^2)
+  
+  t <- numerator / denominator
+
+  cat("t =", t, "\n")
+}
+
+r_value <- 0.04 #given in evidence linear plot
+t_statistic_result <- calculate_t_statistic(r_value, as.numeric(num_Enrolled))
+```
+- p-value = 0.13 > 0.05
+- Conclusion: There's no a linear correlation between the unemployment rate and the second-semester grades of enrolled students.
+
+### 2-sample T-test
+A 2-sample t-test can be performed to investigate the association between the unemployment rate and academic outcomes. This test is extremely relevant since it compares the means of unemployment rates for two different academic outcomes (graduated and dropout). It is possible to determine if unemployment rates affect academic outcomes by analysing the significant difference between two variables. This possible link is nicely demonstrated by the use of a 2-sample t-test.
+<br>
+
+#### <span style="font-size: larger;">H - Hypothesis</span> {#Hypothesis1 .unnumbered}
+- H0: The mean unemployment rate is the same for both academic outcome groups.
+- H1: The mean unemployment rate is different for the two academic outcome groups.
+
+#### <span style="font-size: larger;">A - Assumptions</span> {#Assumptions1 .unnumbered}
+1. The two samples are independent of each other.
+2. The data for unemployment rate in both groups are approximately normally distributed.
+3. The variances of unemployment rate in the two groups are equal.
+
+#### <span style="font-size: larger;">T - Test statistic</span> {#Test1 .unnumbered}
+```{r message=FALSE, warning=FALSE}
+library(readr)
+
+students <- read_csv("students.csv")
+
+# Extracting unemployment rates for the two groups
+unemployment_graduate <- students$`Unemployment rate`[students$Target == 'Graduate']
+unemployment_dropout <- students$`Unemployment rate`[students$Target == 'Dropout']
+
+# Calculating the means
+mean_unemployment_graduate_rate <- mean(unemployment_graduate, na.rm = TRUE)
+mean_unemployment_dropout_rate <- mean(unemployment_dropout, na.rm = TRUE)
+
+# Calculating the standard deviations
+SD1 <- sd(unemployment_graduate, na.rm = TRUE)
+SD2 <- sd(unemployment_dropout, na.rm = TRUE)
+
+# Calculating the pooled variance
+n1 <- length(unemployment_graduate)
+n2 <- length(unemployment_dropout)
+pooled_variance <- ((n1 - 1) * SD1^2 + (n2 - 1) * SD2^2) / (n1 + n2 - 2)
+
+# Calculating the standard error
+SE <- sqrt(pooled_variance / n1 + pooled_variance / n2)
+
+# Calculating the t-statistic
+t <- (mean_unemployment_graduate_rate - mean_unemployment_dropout_rate) / SE
+
+cat("test statistic = ", t, "\n")
+```
+
+#### <span style="font-size: larger;">P - P-value</span> {#p-value1 .unnumbered}
+- The P-value is approximately equal to 0.40.
+
+#### <span style="font-size: larger;">C - Conclusion</span> {#conclusion1 .unnumbered}
+Based on the p-value = 0.40 > 0.05:
+
+- H1 is rejected;
+- Conclusion: The mean unemployment rate is the same for both academic outcome groups.
+
+
+# Acknowledgments
+
+- Realinho, V., Machado, J., Baptista, L. and Martins, M.V. (2022). Predicting Student Dropout and Academic Success. Data, [online] 7(11), p.146. doi:https://doi.org/10.3390/data7110146.
+- www.kaggle.com. (n.d.). Predict students’ dropout and academic success. [online] Available at: https://www.kaggle.com/datasets/thedevastator/higher-education-predictors-of-student-retention?resource=download.
+- Riederer, Y.X., Christophe Dervieux, Emily (n.d.). 11.7 Hide code, text output, messages, or plots | R Markdown Cookbook. [online] bookdown.org. Available at: https://bookdown.org/yihui/rmarkdown-cookbook/hide-one.html.
+- StudyAssist (2020). StudyAssist. [online] Studyassist.gov.au. Available at: https://www.studyassist.gov.au/.
+- Social Science Statistics (2019). Quick P Value from T Score Calculator. [online] Socscistatistics.com. Available at: https://www.socscistatistics.com/pvalues/tdistribution.aspx.
+- r-statistics.co. (n.d.). The Complete ggplot2 Tutorial - Part1 | Introduction To ggplot2 (Full R code). [online] Available at: https://r-statistics.co/Complete-Ggplot2-Tutorial-Part1-With-R-Code.html [Accessed 30 Oct. 2023].
+
+<br>
+
+
+# Appendix
+
+## Client Choice
+
+The relationship between unemployment and student outcomes is thoroughly examined in this report. Organisations like StudyAssist, which play an important role in education, are well-positioned to capitalise on these findings, which could lead to the development or modification of educational programmes tailored to Australian students. Collaboration with an expert body such as StudyAssist not only increases the credibility of the report but also increases the likelihood of its conclusions being implemented.
+
+## Statisitcal Analyses
+
+Linear modelling found a substantial relationship between unemployment rates and graduated students' second semester grades. This linear association, however, was not detected among dropouts and current students. Furthermore, a two-sample t-test revealed that the average jobless rate was consistent across the two major academic outcomes, graduation and dropout. These findings highlight the varied influence of unemployment on distinct academic groups, implying that while unemployment rates may affect the academic performance of some student groups. As a result, the survey's conclusions imply that unemployment rates have no major impact on academic outcomes vs academic performance, but the paper provides an important platform for additional investigation and discussion.
+
+## Limitations
+Moreover, various limitations were discovered while analysing the data:
+
+- The study's dataset is from a huge sample size. Consider the likelihood of data bias as a result of the huge sample size.
+- The data is not highly generalizable, and the results reached are based on the student population of one institution and may not apply to students in other places.
+- Linear modelling posits that unemployment rates and semester grades have a linear connection. In reality, however, this relationship may be more complex and not entirely linear.
+
+
+
+
+
