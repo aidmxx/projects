@@ -29,6 +29,10 @@ This project is an extension game of Assignment 1. In comparison to Assignment 1
 
 ## Java language
 ### INFO1113 Object-Oriented Programming
+#### WizardTower
+This project could be found in directory ([java/INFO1113/WizardTower](java/INFO1113/WizardTower)).
+This project aims to create a Java language based Wizard Tower game. The player is able to place and update tower on the map to prevent enemies from reaching the wizard's tower. And the specific task description could be found in [here](java/INFO1113/WizardTower/INFO1113_Assignment_2023_S2.pdf). However, the project has only be built up to the enemy movement to find the direct road automatically and failed to build the structure of towers.
+
 ### SOFT2201 Software construction and design 1
 ## C language
 ### COMP2017 Systems Programming
