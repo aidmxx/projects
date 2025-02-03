@@ -1,6 +1,8 @@
-# projects
+# Projects
 This repository aims to store all school projects that created by the author `aidmxx` up to now. Considering the various of projects' main language, therefore, the projects are categorised via their edited programme lanugages. The format is following by `programme lanugage/course_laugage/project/etc`.
 And below is shown the specific project categorisation and its content introduction:
+
+
 ## Python language
 ### INFO1110 Introduction to Programming
 #### Assignment 1
@@ -34,8 +36,20 @@ This project could be found in directory ([java/INFO1113/WizardTower](java/INFO1
 This project aims to create a Java language based Wizard Tower game. The player is able to place and update tower on the map to prevent enemies from reaching the wizard's tower. And the specific task description could be found in [here](java/INFO1113/WizardTower/INFO1113_Assignment_2023_S2.pdf). However, the project has only be built up to the enemy movement to find the direct road automatically and failed to build the structure of towers.
 
 ### SOFT2201 Software construction and design 1
+
+
 ## C language
 ### COMP2017 Systems Programming
+#### Assignment 1
+This project could be found in directory ([C/COMP2017/asm-1](C/COMP2017/asm-1)).
+This 
+#### Assignment 2
+This project could be found in directory ([C/COMP2017/asm-2](C/COMP2017/asm-2)).
+
+#### Assignment 3
+This project could be found in directory ([C/COMP2017/asm-3](C/COMP2017/asm-3)).
+
+
 ## R language
 ### DATA1001 Foundations of Data Science
 #### Project 2
