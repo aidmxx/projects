@@ -1,0 +1,41 @@
+# Generated email test report
+tests/testthat/email_tests_report.html
+
+# Local email credentials setup script (do not track secrets)
+# setup_email_credentials.R
+
+# R package dependencies
+local_lib/
+lib/
+
+# R session files
+.RData
+.Rhistory
+.Ruserdata
+
+# Test coverage reports
+test_coverage.html
+*coverage_report.html
+
+# Temporary files
+*.tmp
+*.temp
+
+# DuckDB WAL (Write-Ahead Log) files
+*.wal
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# R package build artifacts
+*.tar.gz
+*.zip
+.Rproj.user
+.sqlite

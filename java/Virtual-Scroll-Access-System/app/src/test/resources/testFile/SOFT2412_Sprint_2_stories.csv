@@ -1,0 +1,17 @@
+sep=;
+Story Title;Average;Estimate;Vote Started;Voting Duration;Avg Voting Time;Fastest;Slowest;
+Add an attribute to detect the text file in Scroll database;0.5;½;2024/10/17 11:59:05;00:00:08;00:00:05;Kang;Kang;
+Add attributes upload/download counters for each time relevant methods called into Scroll;0.5;½;2024/10/17 11:59:15;00:00:06;00:00:04;Kang;Kang;
+Allow optional query parameters for filtering and sorting scroll information based on user input;2;2;2024/10/17 11:59:52;00:00:15;00:00:14;Kang;Kang;
+Create a backend method to add a new daily scroll into the Daily_Scroll database;2;2;2024/10/17 12:00:09;00:00:09;00:00:07;Kang;Kang;
+Create a backend method to extract the statistics of a scroll;0.5;½;2024/10/17 12:01:02;00:00:14;00:00:13;Kang;Kang;
+Create a backend method to extract upload/download counter by given scroll_id;0.5;½;2024/10/17 12:01:19;00:00:03;00:00:02;Kang;Kang;
+Create a backend method to retrieve scrolls that satisfy a specific filtering requirement from the Scroll database;3;3;2024/10/17 12:05:04;00:00:04;00:00:00;Kang;Kang;
+Create a daily random scroll UI and display its content;2;2;2024/10/17 12:01:35;00:07:04;00:07:03;Kang;Kang;
+Create a new database to store everyday random scroll info;1;1;2024/10/17 12:03:32;00:00:06;00:00:05;Kang;Kang;
+Design a UI that allow users to preview the content in a scroll before they download it;1;1;2024/10/17 12:03:42;00:00:04;00:00:03;Kang;Kang;
+Handle the return preview information based on different file format in the backend;2;2;2024/10/17 12:03:47;00:00:06;00:00:05;Kang;Kang;
+Implement a filtering or searching functionality in the main UI for user to view all intended scrolls;2;2;2024/10/17 12:03:54;00:00:05;00:00:05;Kang;Kang;
+Implement an upload/download counter for a scroll each time a user upload/download in the Scroll database;1;1;2024/10/17 12:04:01;00:00:05;00:00:04;Kang;Kang;
+Need a function to search the scroll by name and timestamp;2;2;2024/10/17 12:04:07;00:00:18;00:00:16;Kang;Kang;
+User email and phone number should be checked with a valid format;1;1;2024/10/17 12:04:29;00:00:03;00:00:02;Kang;Kang;

@@ -1,0 +1,842 @@
+/Users/sarahaiko/SOFT3888_TU16_01_P16/email_cron.sh: line 3: Rscript: command not found
+/Users/sarahaiko/SOFT3888_TU16_01_P16/email_cron.sh: line 3: Rscript: command not found
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+
+Attaching package: ‘lubridate’
+
+The following objects are masked from ‘package:base’:
+
+    date, intersect, setdiff, union
+
+=== Email Scheduler Started === 2025-10-23 13:35:17 
+Checking due schedules at: 2025-10-23 13:35:17 
+Current weekday: 5 (1=Monday, 7=Sunday)
+Current day of month: 23 
+Processing 2 due email schedules
+Sending email to: sarahaikositompul0625@gmail.com 
+Subject: Livestock Dashboard Report - 2025-10-23 
+Schedule ID: 14 
+Frequency: daily 
+Send time: 48840 
+The email message was sent successfully.
+✅ Email sent successfully to sarahaikositompul0625@gmail.com 
+Sending email to: ssit0260@uni.sydney.edu.au 
+Subject: Livestock Dashboard Report - 2025-10-23 
+Schedule ID: 13 
+Frequency: weekly 
+Send time: 48000 
+The email message was sent successfully.
+✅ Email sent successfully to ssit0260@uni.sydney.edu.au 
+=== Email Scheduler Completed Successfully ===
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+
+Attaching package: ‘lubridate’
+
+The following objects are masked from ‘package:base’:
+
+    date, intersect, setdiff, union
+
+=== Email Scheduler Started === 2025-10-23 13:40:01 
+Checking due schedules at: 2025-10-23 13:40:01 
+Current weekday: 5 (1=Monday, 7=Sunday)
+Current day of month: 23 
+No emails due for sending
+=== Email Scheduler Completed Successfully ===
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+
+Attaching package: ‘lubridate’
+
+The following objects are masked from ‘package:base’:
+
+    date, intersect, setdiff, union
+
+=== Email Scheduler Started === 2025-10-23 13:45:01 
+Checking due schedules at: 2025-10-23 13:45:01 
+Current weekday: 5 (1=Monday, 7=Sunday)
+Current day of month: 23 
+No emails due for sending
+=== Email Scheduler Completed Successfully ===
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+
+Attaching package: ‘lubridate’
+
+The following objects are masked from ‘package:base’:
+
+    date, intersect, setdiff, union
+
+=== Email Scheduler Started === 2025-10-23 13:50:02 
+Checking due schedules at: 2025-10-23 13:50:02 
+Current weekday: 5 (1=Monday, 7=Sunday)
+Current day of month: 23 
+No emails due for sending
+=== Email Scheduler Completed Successfully ===
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+
+Attaching package: ‘lubridate’
+
+The following objects are masked from ‘package:base’:
+
+    date, intersect, setdiff, union
+
+=== Email Scheduler Started === 2025-10-23 13:55:01 
+Checking due schedules at: 2025-10-23 13:55:01 
+Current weekday: 5 (1=Monday, 7=Sunday)
+Current day of month: 23 
+Processing 1 due email schedules
+Sending email to: sarahaikositompul0625@gmail.com 
+Subject: Livestock Dashboard Report - 2025-10-23 
+Schedule ID: 16 
+Frequency: daily 
+Send time: 49980 
+❌ Error sending email to sarahaikositompul0625@gmail.com : There is no blastula key that corresponds to the `id` of "weekly_report_email". 
+=== Email Scheduler Completed Successfully ===
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+
+Attaching package: ‘lubridate’
+
+The following objects are masked from ‘package:base’:
+
+    date, intersect, setdiff, union
+
+=== Email Scheduler Started === 2025-10-23 13:56:17 
+Checking due schedules at: 2025-10-23 13:56:17 
+Current weekday: 5 (1=Monday, 7=Sunday)
+Current day of month: 23 
+No emails due for sending
+=== Email Scheduler Completed Successfully ===
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+
+Attaching package: ‘lubridate’
+
+The following objects are masked from ‘package:base’:
+
+    date, intersect, setdiff, union
+
+=== Email Scheduler Started === 2025-10-23 14:00:01 
+Checking due schedules at: 2025-10-23 14:00:01 
+Current weekday: 5 (1=Monday, 7=Sunday)
+Current day of month: 23 
+Processing 1 due email schedules
+Sending email to: ssit0260@uni.sydney.edu.au 
+Subject: Livestock Dashboard Report - 2025-10-23 
+Schedule ID: 17 
+Frequency: daily 
+Send time: 50400 
+❌ Error sending email to ssit0260@uni.sydney.edu.au : There is no blastula key that corresponds to the `id` of "weekly_report_email". 
+=== Email Scheduler Completed Successfully ===
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+
+Attaching package: ‘lubridate’
+
+The following objects are masked from ‘package:base’:
+
+    date, intersect, setdiff, union
+
+=== Email Scheduler Started === 2025-10-23 14:01:07 
+Checking due schedules at: 2025-10-23 14:01:07 
+Current weekday: 5 (1=Monday, 7=Sunday)
+Current day of month: 23 
+Processing 1 due email schedules
+Sending email to: ssit0260@uni.sydney.edu.au 
+Subject: Livestock Dashboard Report - 2025-10-23 
+Schedule ID: 17 
+Frequency: daily 
+Send time: 50400 
+The email message was sent successfully.
+✅ Email sent successfully to ssit0260@uni.sydney.edu.au 
+=== Email Scheduler Completed Successfully ===
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+
+Attaching package: ‘lubridate’
+
+The following objects are masked from ‘package:base’:
+
+    date, intersect, setdiff, union
+
+=== Email Scheduler Started === 2025-10-23 14:03:50 
+Checking due schedules at: 2025-10-23 14:03:50 
+Current weekday: 5 (1=Monday, 7=Sunday)
+Current day of month: 23 
+No emails due for sending
+=== Email Scheduler Completed Successfully ===
+✅ Credentials accessible: sarahaikositompul0625@gmail.com 
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+
+Attaching package: ‘lubridate’
+
+The following objects are masked from ‘package:base’:
+
+    date, intersect, setdiff, union
+
+Error in `.local()`:
+! {"exception_type":"IO","exception_message":"Could not set lock on file \"/Users/sarahaiko/SOFT3888_TU16_01_P16/src/data.duckdb\": Conflicting lock is held in /Applications/RStudio.app/Contents/Resources/app/bin/rsession-arm64 (PID 16955) by user sarahaiko. See also https://duckdb.org/docs/stable/connect/concurrency","errno":"35"}
+ℹ Context: rapi_startup
+Backtrace:
+     ▆
+  1. ├─DBI::dbConnect(duckdb::duckdb(), "src/data.duckdb")
+  2. ├─duckdb::dbConnect(duckdb::duckdb(), "src/data.duckdb")
+  3. │ └─duckdb (local) .local(drv, ...)
+  4. │   └─duckdb::duckdb(dbdir, read_only, bigint, config)
+  5. │     ├─methods::new(...)
+  6. │     │ ├─methods::initialize(value, ...)
+  7. │     │ └─methods::initialize(value, ...)
+  8. │     └─duckdb:::rethrow_rapi_startup(dbdir, read_only, config, environment_scan)
+  9. │       ├─rlang::try_fetch(...)
+ 10. │       │ ├─base::tryCatch(...)
+ 11. │       │ │ └─base (local) tryCatchList(expr, classes, parentenv, handlers)
+ 12. │       │ │   └─base (local) tryCatchOne(expr, names, parentenv, handlers[[1L]])
+ 13. │       │ │     └─base (local) doTryCatch(return(expr), name, parentenv, handler)
+ 14. │       │ └─base::withCallingHandlers(...)
+ 15. │       └─duckdb:::rapi_startup(dbdir, readonly, configsexp, environment_scan)
+ 16. ├─duckdb (local) `<fn>`("rapi_startup", "{\"exception_type\":\"IO\",\"exception_message\":\"Could not set lock on file \\\"/Users/sarahaiko/SOFT3888_TU16_01_P16/src/data.duckdb\\\": Conflicting lock is held in /Applications/RStudio.app/Contents/Resources/app/bin/rsession-arm64 (PID 16955) by user sarahaiko. See also https://duckdb.org/docs/stable/connect/concurrency\",\"errno\":\"35\"}")
+ 17. │ └─rlang::abort(error_parts, class = "duckdb_error", !!!fields)
+ 18. │   └─rlang:::signal_abort(cnd, .file)
+ 19. │     └─base::signalCondition(cnd)
+ 20. └─rlang (local) `<fn>`(`<dckdb_rr>`)
+ 21.   └─handlers[[1L]](cnd)
+ 22.     └─duckdb:::rethrow_error_from_rapi(e, call)
+ 23.       └─rlang::abort(msg, call = call)
+Execution halted
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+
+Attaching package: ‘lubridate’
+
+The following objects are masked from ‘package:base’:
+
+    date, intersect, setdiff, union
+
+=== Email Scheduler Started === 2025-10-23 14:09:29 
+Checking due schedules at: 2025-10-23 14:09:29 
+Current weekday: 5 (1=Monday, 7=Sunday)
+Current day of month: 23 
+No emails due for sending
+=== Email Scheduler Completed Successfully ===
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+
+Attaching package: ‘lubridate’
+
+The following objects are masked from ‘package:base’:
+
+    date, intersect, setdiff, union
+
+=== Email Scheduler Started === 2025-10-23 14:10:01 
+Checking due schedules at: 2025-10-23 14:10:01 
+Current weekday: 5 (1=Monday, 7=Sunday)
+Current day of month: 23 
+Processing 1 due email schedules
+Sending email to: sarahaikositompul0625@gmail.com 
+Subject: Livestock Dashboard Report - 2025-10-23 
+Schedule ID: 18 
+Frequency: daily 
+Send time: 51000 
+❌ Error sending email to sarahaikositompul0625@gmail.com : There is no blastula key that corresponds to the `id` of "weekly_report_email". 
+=== Email Scheduler Completed Successfully ===
+=== Email Scheduler Started === 2025-10-23 14:11:28 
+Checking due schedules at: 2025-10-23 14:11:28 
+Current weekday: 5 (1=Monday, 7=Sunday)
+Current day of month: 23 
+No emails due for sending
+=== Email Scheduler Completed Successfully ===
+Warning message:
+In value[[3L]](cond) :
+  Failed to get due schedules: error in evaluating the argument 'conn' in selecting a method for function 'dbGetQuery': object 'con' not found
+=== Email Scheduler Started === 2025-10-23 14:11:50 
+Checking due schedules at: 2025-10-23 14:11:50 
+Current weekday: 5 (1=Monday, 7=Sunday)
+Current day of month: 23 
+Processing 2 due email schedules
+Sending email to: sarahaikositompul0625@gmail.com 
+Subject: Livestock Dashboard Report - 2025-10-23 
+Schedule ID: 12 
+Frequency: daily 
+Send time: 51060 
+The email message was sent successfully.
+✅ Email sent successfully to sarahaikositompul0625@gmail.com 
+Sending email to: sarahaikositompul0625@gmail.com 
+Subject: Livestock Dashboard Report - 2025-10-23 
+Schedule ID: 18 
+Frequency: daily 
+Send time: 51000 
+The email message was sent successfully.
+✅ Email sent successfully to sarahaikositompul0625@gmail.com 
+=== Email Scheduler Completed Successfully ===
+=== Email Scheduler Started === 2025-10-23 14:15:02 
+Checking due schedules at: 2025-10-23 14:15:02 
+Current weekday: 5 (1=Monday, 7=Sunday)
+Current day of month: 23 
+Processing 1 due email schedules
+Sending email to: sarahaikositompul0625@gmail.com 
+Subject: Livestock Dashboard Report - 2025-10-23 
+Schedule ID: 19 
+Frequency: daily 
+Send time: 51300 
+❌ Error sending email to sarahaikositompul0625@gmail.com : There is no blastula key that corresponds to the `id` of "weekly_report_email". 
+=== Email Scheduler Completed Successfully ===
+=== Email Scheduler Started === 2025-10-23 14:16:48 
+Checking due schedules at: 2025-10-23 14:16:48 
+Current weekday: 5 (1=Monday, 7=Sunday)
+Current day of month: 23 
+Processing 1 due email schedules
+Sending email to: sarahaikositompul0625@gmail.com 
+Subject: Livestock Dashboard Report - 2025-10-23 
+Schedule ID: 19 
+Frequency: daily 
+Send time: 51300 
+The email message was sent successfully.
+✅ Email sent successfully to sarahaikositompul0625@gmail.com 
+=== Email Scheduler Completed Successfully ===
+=== Email Scheduler Started === 2025-10-23 14:18:22 
+Checking due schedules at: 2025-10-23 14:18:22 
+Current weekday: 5 (1=Monday, 7=Sunday)
+Current day of month: 23 
+No emails due for sending
+NULL
+=== Email Scheduler Started === 2025-10-23 14:20:01 
+Checking due schedules at: 2025-10-23 14:20:01 
+Current weekday: 5 (1=Monday, 7=Sunday)
+Current day of month: 23 
+Processing 1 due email schedules
+Sending email to: ssit0260@uni.sydney.edu.au 
+Subject: Livestock Dashboard Report - 2025-10-23 
+Schedule ID: 20 
+Frequency: daily 
+Send time: 51600 
+❌ Error sending email to ssit0260@uni.sydney.edu.au : argument "report_filters" is missing, with no default 
+=== Email Scheduler Completed Successfully ===
+=== Email Scheduler Started === 2025-10-23 14:20:32 
+Checking due schedules at: 2025-10-23 14:20:32 
+Current weekday: 5 (1=Monday, 7=Sunday)
+Current day of month: 23 
+No emails due for sending
+NULL
+=== Email Scheduler Started === 2025-10-23 14:20:57 
+Checking due schedules at: 2025-10-23 14:20:57 
+Current weekday: 5 (1=Monday, 7=Sunday)
+Current day of month: 23 
+No emails due for sending
+NULL
+=== Email Scheduler Started === 2025-10-23 14:22:21 
+Checking due schedules at: 2025-10-23 14:22:21 
+Current weekday: 5 (1=Monday, 7=Sunday)
+Current day of month: 23 
+No emails due for sending
+NULL
+=== Email Scheduler Started === 2025-10-23 14:23:21 
+Checking due schedules at: 2025-10-23 14:23:21 
+Current weekday: 5 (1=Monday, 7=Sunday)
+Current day of month: 23 
+No emails due for sending
+NULL
+=== Email Scheduler Started === 2025-10-23 14:25:01 
+Checking due schedules at: 2025-10-23 14:25:01 
+Current weekday: 5 (1=Monday, 7=Sunday)
+Current day of month: 23 
+Processing 1 due email schedules
+Sending email to: sarahaikositompul0625@gmail.com 
+Subject: Livestock Dashboard Report - 2025-10-23 
+Schedule ID: 21 
+Frequency: daily 
+Send time: 51900 
+tcltk DLL is linked to '/opt/X11/lib/libX11.6.dylib'
+WARNING: your platform is not supported. Input is not masked!
+Enter the SMTP server password: 
+❌ Error sending email to sarahaikositompul0625@gmail.com : Login denied [smtp.gmail.com] 
+=== Email Scheduler Completed Successfully ===
+=== Email Scheduler Started === 2025-10-23 14:27:46 
+Checking due schedules at: 2025-10-23 14:27:46 
+Current weekday: 5 (1=Monday, 7=Sunday)
+Current day of month: 23 
+Processing 1 due email schedules
+Sending email to: sarahaikositompul0625@gmail.com 
+Subject: Livestock Dashboard Report - 2025-10-23 
+Schedule ID: 21 
+Frequency: daily 
+Send time: 51900 
+The email message was sent successfully.
+✅ Email sent successfully to sarahaikositompul0625@gmail.com 
+=== Email Scheduler Completed Successfully ===
+=== Email Scheduler Started === 2025-10-23 14:30:01 
+Checking due schedules at: 2025-10-23 14:30:01 
+Current weekday: 5 (1=Monday, 7=Sunday)
+Current day of month: 23 
+Processing 1 due email schedules
+Sending email to: ssit0260@uni.sydney.edu.au 
+Subject: Livestock Dashboard Report - 2025-10-23 
+Schedule ID: 22 
+Frequency: daily 
+Send time: 52200 
+❌ Error sending email to ssit0260@uni.sydney.edu.au : There is no blastula key that corresponds to the `id` of "weekly_report_email". 
+=== Email Scheduler Completed Successfully ===
+=== Email Scheduler Started === 2025-10-23 14:33:09 
+Checking due schedules at: 2025-10-23 14:33:09 
+Current weekday: 5 (1=Monday, 7=Sunday)
+Current day of month: 23 
+Processing 1 due email schedules
+Sending email to: ssit0260@uni.sydney.edu.au 
+Subject: Livestock Dashboard Report - 2025-10-23 
+Schedule ID: 22 
+Frequency: daily 
+Send time: 52200 
+❌ Error sending email to ssit0260@uni.sydney.edu.au : unused argument (password = "vbdityjvreplueunE") 
+=== Email Scheduler Completed Successfully ===
+=== Email Scheduler Started === 2025-10-23 14:33:25 
+Checking due schedules at: 2025-10-23 14:33:25 
+Current weekday: 5 (1=Monday, 7=Sunday)
+Current day of month: 23 
+Processing 1 due email schedules
+Sending email to: ssit0260@uni.sydney.edu.au 
+Subject: Livestock Dashboard Report - 2025-10-23 
+Schedule ID: 22 
+Frequency: daily 
+Send time: 52200 
+❌ Error sending email to ssit0260@uni.sydney.edu.au : unused argument (pass = "vbdityjvreplueunE") 
+=== Email Scheduler Completed Successfully ===
+=== Email Scheduler Started === 2025-10-23 14:33:44 
+Checking due schedules at: 2025-10-23 14:33:44 
+Current weekday: 5 (1=Monday, 7=Sunday)
+Current day of month: 23 
+Processing 1 due email schedules
+Sending email to: ssit0260@uni.sydney.edu.au 
+Subject: Livestock Dashboard Report - 2025-10-23 
+Schedule ID: 22 
+Frequency: daily 
+Send time: 52200 
+tcltk DLL is linked to '/opt/X11/lib/libX11.6.dylib'
+WARNING: your platform is not supported. Input is not masked!
+Enter the SMTP server password: 
+❌ Error sending email to ssit0260@uni.sydney.edu.au : Login denied [smtp.gmail.com] 
+=== Email Scheduler Completed Successfully ===
+=== Email Scheduler Started === 2025-10-23 14:34:04 
+Checking due schedules at: 2025-10-23 14:34:04 
+Current weekday: 5 (1=Monday, 7=Sunday)
+Current day of month: 23 
+Processing 1 due email schedules
+Sending email to: ssit0260@uni.sydney.edu.au 
+Subject: Livestock Dashboard Report - 2025-10-23 
+Schedule ID: 22 
+Frequency: daily 
+Send time: 52200 
+❌ Error sending email to ssit0260@uni.sydney.edu.au : unused argument (password = "vbdityjvreplueunE") 
+=== Email Scheduler Completed Successfully ===
+Error in library(mailR) : there is no package called ‘mailR’
+Calls: suppressPackageStartupMessages -> withCallingHandlers -> library
+Execution halted
+=== Email Scheduler Started === 2025-10-23 14:35:01 
+Checking due schedules at: 2025-10-23 14:35:01 
+Current weekday: 5 (1=Monday, 7=Sunday)
+Current day of month: 23 
+Processing 1 due email schedules
+Sending email to: ssit0260@uni.sydney.edu.au 
+Subject: Livestock Dashboard Report - 2025-10-23 
+Schedule ID: 22 
+Frequency: daily 
+Send time: 52200 
+❌ Error sending email to ssit0260@uni.sydney.edu.au : unused argument (password = "vbdityjvreplueunE") 
+=== Email Scheduler Completed Successfully ===
+=== Email Scheduler Started === 2025-10-23 14:35:05 
+Checking due schedules at: 2025-10-23 14:35:05 
+Current weekday: 5 (1=Monday, 7=Sunday)
+Current day of month: 23 
+Processing 1 due email schedules
+Sending email to: ssit0260@uni.sydney.edu.au 
+Subject: Livestock Dashboard Report - 2025-10-23 
+Schedule ID: 22 
+Frequency: daily 
+Send time: 52200 
+org.apache.commons.mail.EmailException: Sending the email to the following server failed : smtp.gmail.com:465
+	at org.apache.commons.mail.Email.sendMimeMessage(Email.java:1469)
+	at org.apache.commons.mail.Email.send(Email.java:1496)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at RJavaTools.invokeMethod(RJavaTools.java:399)
+Caused by: javax.mail.AuthenticationFailedException: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials d2e1a72fcca58-7a274bb3cc8sm846235b3a.51 - gsmtp
+
+	at com.sun.mail.smtp.SMTPTransport$Authenticator.authenticate(SMTPTransport.java:965)
+	at com.sun.mail.smtp.SMTPTransport.authenticate(SMTPTransport.java:876)
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:780)
+	at javax.mail.Service.connect(Service.java:388)
+	at javax.mail.Service.connect(Service.java:246)
+	at javax.mail.Service.connect(Service.java:195)
+	at javax.mail.Transport.send0(Transport.java:254)
+	at javax.mail.Transport.send(Transport.java:124)
+	at org.apache.commons.mail.Email.sendMimeMessage(Email.java:1459)
+	... 6 more
+NULL
+❌ Error sending email to ssit0260@uni.sydney.edu.au : EmailException (Java): Sending the email to the following server failed : smtp.gmail.com:465 
+=== Email Scheduler Completed Successfully ===
+=== Email Scheduler Started === 2025-10-23 14:35:26 
+Checking due schedules at: 2025-10-23 14:35:26 
+Current weekday: 5 (1=Monday, 7=Sunday)
+Current day of month: 23 
+Processing 1 due email schedules
+Sending email to: ssit0260@uni.sydney.edu.au 
+Subject: Livestock Dashboard Report - 2025-10-23 
+Schedule ID: 22 
+Frequency: daily 
+Send time: 52200 
+org.apache.commons.mail.EmailException: Sending the email to the following server failed : smtp.gmail.com:465
+	at org.apache.commons.mail.Email.sendMimeMessage(Email.java:1469)
+	at org.apache.commons.mail.Email.send(Email.java:1496)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at RJavaTools.invokeMethod(RJavaTools.java:399)
+Caused by: javax.mail.AuthenticationFailedException: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 98e67ed59e1d1-33faff37afesm779211a91.1 - gsmtp
+
+	at com.sun.mail.smtp.SMTPTransport$Authenticator.authenticate(SMTPTransport.java:965)
+	at com.sun.mail.smtp.SMTPTransport.authenticate(SMTPTransport.java:876)
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:780)
+	at javax.mail.Service.connect(Service.java:388)
+	at javax.mail.Service.connect(Service.java:246)
+	at javax.mail.Service.connect(Service.java:195)
+	at javax.mail.Transport.send0(Transport.java:254)
+	at javax.mail.Transport.send(Transport.java:124)
+	at org.apache.commons.mail.Email.sendMimeMessage(Email.java:1459)
+	... 6 more
+NULL
+❌ Error sending email to ssit0260@uni.sydney.edu.au : EmailException (Java): Sending the email to the following server failed : smtp.gmail.com:465 
+=== Email Scheduler Completed Successfully ===
+=== Email Scheduler Started === 2025-10-23 14:37:50 
+Checking due schedules at: 2025-10-23 14:37:50 
+Current weekday: 5 (1=Monday, 7=Sunday)
+Current day of month: 23 
+Processing 1 due email schedules
+Sending email to: ssit0260@uni.sydney.edu.au 
+Subject: Livestock Dashboard Report - 2025-10-23 
+Schedule ID: 22 
+Frequency: daily 
+Send time: 52200 
+tcltk DLL is linked to '/opt/X11/lib/libX11.6.dylib'
+WARNING: your platform is not supported. Input is not masked!
+Enter the SMTP server password: 
+❌ Error sending email to ssit0260@uni.sydney.edu.au : Login denied [smtp.gmail.com] 
+=== Email Scheduler Completed Successfully ===
+=== Email Scheduler Started === 2025-10-23 14:38:09 
+Checking due schedules at: 2025-10-23 14:38:09 
+Current weekday: 5 (1=Monday, 7=Sunday)
+Current day of month: 23 
+Processing 1 due email schedules
+Sending email to: ssit0260@uni.sydney.edu.au 
+Subject: Livestock Dashboard Report - 2025-10-23 
+Schedule ID: 22 
+Frequency: daily 
+Send time: 52200 
+❌ Error sending email to ssit0260@uni.sydney.edu.au : SMTP credentials must be supplied to the `credentials` argument.
+We can use either of these three helper functions for this:
+* `creds_key()`: uses information stored in the system's key-value store (have a look at `?creds_key`)
+* `creds_file()`: takes credentials stored in an on-disk file (use `?creds_file` for further info)
+* `creds()`: allows for manual specification of SMTP credentials 
+=== Email Scheduler Completed Successfully ===
+=== Email Scheduler Started === 2025-10-23 14:38:27 
+Checking due schedules at: 2025-10-23 14:38:27 
+Current weekday: 5 (1=Monday, 7=Sunday)
+Current day of month: 23 
+Processing 1 due email schedules
+Sending email to: ssit0260@uni.sydney.edu.au 
+Subject: Livestock Dashboard Report - 2025-10-23 
+Schedule ID: 22 
+Frequency: daily 
+Send time: 52200 
+❌ Error sending email to ssit0260@uni.sydney.edu.au : unused argument (password = "vbdityjvreplueunE") 
+=== Email Scheduler Completed Successfully ===
+=== Email Scheduler Started === 2025-10-23 14:38:43 
+Checking due schedules at: 2025-10-23 14:38:43 
+Current weekday: 5 (1=Monday, 7=Sunday)
+Current day of month: 23 
+Processing 1 due email schedules
+Sending email to: ssit0260@uni.sydney.edu.au 
+Subject: Livestock Dashboard Report - 2025-10-23 
+Schedule ID: 22 
+Frequency: daily 
+Send time: 52200 
+❌ Error sending email to ssit0260@uni.sydney.edu.au : unused argument (pass = "vbdityjvreplueunE") 
+=== Email Scheduler Completed Successfully ===
+=== Email Scheduler Started === 2025-10-23 14:39:00 
+Checking due schedules at: 2025-10-23 14:39:00 
+Current weekday: 5 (1=Monday, 7=Sunday)
+Current day of month: 23 
+Processing 1 due email schedules
+Sending email to: ssit0260@uni.sydney.edu.au 
+Subject: Livestock Dashboard Report - 2025-10-23 
+Schedule ID: 22 
+Frequency: daily 
+Send time: 52200 
+❌ Error sending email to ssit0260@uni.sydney.edu.au : lexical error: invalid char in json text.
+                                       user: sarahaikositompul0625@gma
+                     (right here) ------^
+ 
+=== Email Scheduler Completed Successfully ===
+=== Email Scheduler Started === 2025-10-23 14:39:17 
+Checking due schedules at: 2025-10-23 14:39:17 
+Current weekday: 5 (1=Monday, 7=Sunday)
+Current day of month: 23 
+Processing 1 due email schedules
+Sending email to: ssit0260@uni.sydney.edu.au 
+Subject: Livestock Dashboard Report - 2025-10-23 
+Schedule ID: 22 
+Frequency: daily 
+Send time: 52200 
+❌ Error sending email to ssit0260@uni.sydney.edu.au : lexical error: invalid char in json text.
+                                       user: sarahaikositompul0625@gma
+                     (right here) ------^
+ 
+=== Email Scheduler Completed Successfully ===
+=== Email Scheduler Started === 2025-10-23 14:39:45 
+Checking due schedules at: 2025-10-23 14:39:45 
+Current weekday: 5 (1=Monday, 7=Sunday)
+Current day of month: 23 
+Processing 1 due email schedules
+Sending email to: ssit0260@uni.sydney.edu.au 
+Subject: Livestock Dashboard Report - 2025-10-23 
+Schedule ID: 22 
+Frequency: daily 
+Send time: 52200 
+❌ Error sending email to ssit0260@uni.sydney.edu.au : argument is of length zero 
+=== Email Scheduler Completed Successfully ===
+=== Email Scheduler Started === 2025-10-23 14:40:01 
+Checking due schedules at: 2025-10-23 14:40:01 
+Current weekday: 5 (1=Monday, 7=Sunday)
+Current day of month: 23 
+Processing 1 due email schedules
+Sending email to: ssit0260@uni.sydney.edu.au 
+Subject: Livestock Dashboard Report - 2025-10-23 
+Schedule ID: 22 
+Frequency: daily 
+Send time: 52200 
+❌ Error sending email to ssit0260@uni.sydney.edu.au : argument is of length zero 
+=== Email Scheduler Completed Successfully ===
+Using SMTP credentials for: sarahaikositompul0625@gmail.com 
+=== Email Scheduler Started === 2025-10-23 14:41:33 
+Checking due schedules at: 2025-10-23 14:41:33 
+Current weekday: 5 (1=Monday, 7=Sunday)
+Current day of month: 23 
+Processing 1 due email schedules
+Sending email to: ssit0260@uni.sydney.edu.au 
+Subject: Livestock Dashboard Report - 2025-10-23 
+Schedule ID: 22 
+Frequency: daily 
+Send time: 52200 
+org.apache.commons.mail.EmailException: Sending the email to the following server failed : smtp.gmail.com:465
+	at org.apache.commons.mail.Email.sendMimeMessage(Email.java:1469)
+	at org.apache.commons.mail.Email.send(Email.java:1496)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at RJavaTools.invokeMethod(RJavaTools.java:399)
+Caused by: javax.mail.AuthenticationFailedException: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 98e67ed59e1d1-33faff373f5sm809785a91.4 - gsmtp
+
+	at com.sun.mail.smtp.SMTPTransport$Authenticator.authenticate(SMTPTransport.java:965)
+	at com.sun.mail.smtp.SMTPTransport.authenticate(SMTPTransport.java:876)
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:780)
+	at javax.mail.Service.connect(Service.java:388)
+	at javax.mail.Service.connect(Service.java:246)
+	at javax.mail.Service.connect(Service.java:195)
+	at javax.mail.Transport.send0(Transport.java:254)
+	at javax.mail.Transport.send(Transport.java:124)
+	at org.apache.commons.mail.Email.sendMimeMessage(Email.java:1459)
+	... 6 more
+NULL
+❌ Error sending email to ssit0260@uni.sydney.edu.au : EmailException (Java): Sending the email to the following server failed : smtp.gmail.com:465 
+=== Email Scheduler Completed Successfully ===
+Using SMTP credentials for: sarahaikositompul0625@gmail.com 
+=== Email Scheduler Started === 2025-10-23 14:43:04 
+Checking due schedules at: 2025-10-23 14:43:04 
+Current weekday: 5 (1=Monday, 7=Sunday)
+Current day of month: 23 
+Processing 1 due email schedules
+Sending email to: ssit0260@uni.sydney.edu.au 
+Subject: Livestock Dashboard Report - 2025-10-23 
+Schedule ID: 22 
+Frequency: daily 
+Send time: 52200 
+✅ Email sent successfully to ssit0260@uni.sydney.edu.au 
+=== Email Scheduler Completed Successfully ===
+=== Email Scheduler Started === 2025-10-23 14:45:01 
+Checking due schedules at: 2025-10-23 14:45:01 
+Current weekday: 5 (1=Monday, 7=Sunday)
+Current day of month: 23 
+Processing 1 due email schedules
+Sending email to: sarahaikositompul0625@gmail.com 
+Subject: Livestock Dashboard Report - 2025-10-23 
+Schedule ID: 23 
+Frequency: daily 
+Send time: 53100 
+❌ Error sending email to sarahaikositompul0625@gmail.com : argument is of length zero 
+=== Email Scheduler Completed Successfully ===
+Using SMTP credentials for: sarahaikositompul0625@gmail.com 
+=== Email Scheduler Started === 2025-10-23 14:45:47 
+Checking due schedules at: 2025-10-23 14:45:47 
+Current weekday: 5 (1=Monday, 7=Sunday)
+Current day of month: 23 
+Processing 1 due email schedules
+Sending email to: sarahaikositompul0625@gmail.com 
+Subject: Livestock Dashboard Report - 2025-10-23 
+Schedule ID: 23 
+Frequency: daily 
+Send time: 53100 
+✅ Email sent successfully to sarahaikositompul0625@gmail.com 
+=== Email Scheduler Completed Successfully ===
+=== Email Scheduler Started === 2025-10-23 14:50:01 
+Checking due schedules at: 2025-10-23 14:50:01 
+Current weekday: 5 (1=Monday, 7=Sunday)
+Current day of month: 23 
+Processing 2 due email schedules
+Sending email to: sarahaikositompul0625@gmail.com 
+Subject: Livestock Dashboard Report - 2025-10-23 
+Schedule ID: 15 
+Frequency: weekly 
+Send time: 53400 
+❌ Error sending email to sarahaikositompul0625@gmail.com : argument is of length zero 
+Sending email to: ssit0260@uni.sydney.edu.au 
+Subject: Livestock Dashboard Report - 2025-10-23 
+Schedule ID: 24 
+Frequency: daily 
+Send time: 53400 
+❌ Error sending email to ssit0260@uni.sydney.edu.au : argument is of length zero 
+=== Email Scheduler Completed Successfully ===
+Using SMTP credentials for: sarahaikositompul0625@gmail.com 
+=== Email Scheduler Started === 2025-10-23 14:51:23 
+Checking due schedules at: 2025-10-23 14:51:23 
+Current weekday: 5 (1=Monday, 7=Sunday)
+Current day of month: 23 
+Processing 2 due email schedules
+Sending email to: sarahaikositompul0625@gmail.com 
+Subject: Livestock Dashboard Report - 2025-10-23 
+Schedule ID: 15 
+Frequency: weekly 
+Send time: 53400 
+✅ Email sent successfully to sarahaikositompul0625@gmail.com 
+Sending email to: ssit0260@uni.sydney.edu.au 
+Subject: Livestock Dashboard Report - 2025-10-23 
+Schedule ID: 24 
+Frequency: daily 
+Send time: 53400 
+✅ Email sent successfully to ssit0260@uni.sydney.edu.au 
+=== Email Scheduler Completed Successfully ===

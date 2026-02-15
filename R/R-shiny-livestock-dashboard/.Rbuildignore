@@ -1,0 +1,16 @@
+^.*\.Rproj$
+^\.Rproj\.user$
+^\.Rhistory$
+^\.RData$
+^\.Ruserdata$
+^src/.*\.Rproj$
+^src/.*\.Rhistory$
+^src/.*\.RData$
+^src/.*\.Ruserdata$
+^tests/testthat/.*\.Rproj$
+^tests/testthat/.*\.Rhistory$
+^tests/testthat/.*\.RData$
+^tests/testthat/.*\.Ruserdata$
+^\.github$
+^coverage_report\.html$
+^test_data\.duckdb$

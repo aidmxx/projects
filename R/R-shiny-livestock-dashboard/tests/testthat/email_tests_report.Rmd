@@ -1,0 +1,109 @@
+---
+title: "Email Tests Report"
+output:
+  html_document:
+    theme: flatly
+    toc: true
+    toc_depth: 2
+    toc_float: true
+    df_print: paged
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = TRUE, warning = TRUE)
+library(testthat)
+library(htmltools)
+```
+
+# Overview
+
+This report runs the email-related test files and summarizes results.
+
+```{r discover-files}
+# Determine project root (so this works when knitting from tests/testthat/)
+root_dir <- if (file.exists("src")) {
+  "."
+} else if (file.exists("../src")) {
+  ".."
+} else if (file.exists("../../src")) {
+  "../.."
+} else {
+  "."
+}
+
+test_files <- file.path(root_dir, c(
+  "tests/testthat/test-email-features.R",
+  "tests/testthat/test-email-credentials.R",
+  "tests/testthat/test-email-report-generation.R",
+  "tests/testthat/test-email-integration.R"
+))
+existing_test_files <- test_files[file.exists(test_files)]
+``` 
+
+```{r validate-files}
+if (length(existing_test_files) == 0) {
+  stop("No email test files found.")
+}
+```
+
+# Summary
+
+```{r run-tests-collect}
+count_tests_in_file <- function(path) {
+  lines <- tryCatch(readLines(path, warn = FALSE), error = function(e) character())
+  sum(grepl("\\btest_that\\s*\\(", lines))
+}
+
+total_tests <- 0
+per_file_counts <- data.frame(
+  file = basename(existing_test_files),
+  tests = integer(length(existing_test_files)),
+  stringsAsFactors = FALSE
+)
+
+for (i in seq_along(existing_test_files)) {
+  per_file_counts$tests[i] <- count_tests_in_file(existing_test_files[i])
+  total_tests <- total_tests + per_file_counts$tests[i]
+}
+
+htmltools::div(
+  htmltools::h4("Email Test Totals"),
+  htmltools::tags$p(htmltools::tags$b("Total test files:"), length(existing_test_files)),
+  htmltools::tags$p(htmltools::tags$b("Total tests:"), total_tests)
+)
+```
+
+```{r per-file-table}
+knitr::kable(per_file_counts, caption = "Per-file test counts")
+```
+
+# Execution Output
+
+The chunks below execute each test file with the summary reporter so you can see pass/fail output inline.
+
+```{r run-features}
+cat("\n==== test-email-features.R ====\n")
+testthat::test_file(file.path(root_dir, "tests/testthat/test-email-features.R"), reporter = "summary")
+```
+
+```{r run-credentials}
+cat("\n==== test-email-credentials.R ====\n")
+testthat::test_file(file.path(root_dir, "tests/testthat/test-email-credentials.R"), reporter = "summary")
+```
+
+```{r run-report-generation}
+cat("\n==== test-email-report-generation.R ====\n")
+testthat::test_file(file.path(root_dir, "tests/testthat/test-email-report-generation.R"), reporter = "summary")
+```
+
+```{r run-integration}
+cat("\n==== test-email-integration.R ====\n")
+testthat::test_file(file.path(root_dir, "tests/testthat/test-email-integration.R"), reporter = "summary")
+```
+
+# Notes
+
+- Totals are computed from occurrences of `test_that(` in each file.
+- See the Execution Output sections for detailed pass/fail logs.
+
+

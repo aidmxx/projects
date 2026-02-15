@@ -54,6 +54,20 @@ This project aims to implement a basic level Pac-Man by using the specified GoF 
 This project could be found in directory ([java/SOFT2201/asm-3](java/SOFT2201/asm-3)).  
 This project extends Assignment 2 with adding more structures to implement. And the specific task description could be found in directory [java/SOFT2201/asm-2/Assignment_3__FINAL_.pdf](java/SOFT2201/asm-2/Assignment_3__FINAL_.pdf). However, this project hasn't been finished and with a few issues on point counting after the ghosts are eaten.
 
+
+### Virtual Scroll Access System
+This team work project is a gateway to the timeless knowledge hidden within ancient scrolls. Designed to manage, preserve, and provide seamless access to these rare repositories of wisdom, the system blends the mystique of the past with the convenience of modern technology.
+
+#### How to Run The Application?
+To run the currency converter application, type the following command into the command line:
+
+```./gradlew -x test build run --console=plain```
+
+To run the test for the application, use the following command, it will produce a test report, which can be found in the file build/reports/jacoco/test/html/:
+
+```./gradlew test JacocoTestReport```
+
+
 ## C language
 ### COMP2017 Systems Programming
 #### Assignment 1
@@ -82,3 +96,16 @@ This project uses the R language to draw `ggplot` graph for analysing the given 
 #### Project 3
 This could be found in directory ([R/DATA1001/project3](R/DATA1001/project3)).  
 This project employs R language to generate a report with graph analysis about the effect of unemployment rate and students' semester grades.
+
+
+### R shiny livestock dashboard
+#### Company/Department
+SOLES – School of Life and Environmental Sciences, The University of Sydney
+
+#### Project Title
+A Dashboard for the Livestock Industry
+
+#### Project Description & Scope
+This team work project aims to develop an interactive Shiny dashboard for farm data, enabling customers to visualise and monitor data from various agricultural systems. The dashboard will focus on user interface design, with interactive features such as drop-down menus, filtering, and data export.
+
+The client will provide the dataset, which may require preprocessing and basic data management before integration into the Shiny app.

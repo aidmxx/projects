@@ -1,0 +1,1 @@
+print("Hello! This is a king from SOFT2412 ^_^")
